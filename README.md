@@ -24,9 +24,31 @@
 - 复盘要改变下一轮动作：错误转成检查点，成功转成方法，变化的数据独立管理。
 - 工作量超出容量就明确取舍，不默认加班。
 
+## 日历跟进监控：可运行的第一步
+
+新增 [完整运行流程](calendar-monitoring.md)、[虚构任务输入](examples/tasks.json)、[只读辅助脚本](scripts/monitor.mjs)和[自动化测试](tests/monitor.test.mjs)。
+
+- 早报承接上次收工反馈：今天先做什么、追谁、哪些交付有风险。
+- 收工提醒核实最后一步：已完成、未完成、未确认、下一检查与明日入口。
+- 文件变化与业务完成分开；用户新反馈覆盖旧状态，打开的工作簿使用待同步机制。
+- 每轮对比文件基线；首轮不乱报新增、扫描失败不乱报删除、重复运行不重复提醒。
+- 外部日历同步规则包含稳定事件键、续排、人工改动、部分失败和非工作日处理。
+
+工具需要 Node.js 18+，只使用标准库。将示例复制到仓库外的私人目录，再让助手维护真实任务：
+```sh
+node scripts/monitor.mjs brief examples/tasks.json 2026-11-03 morning
+node scripts/monitor.mjs brief examples/tasks.json 2026-11-03 close
+node --test tests/monitor.test.mjs
+```
+输出是机器可读的日期级检查队列，交给助手结合文件内容与最新反馈生成早报/收工提醒。它不自动读 Excel、改日历或运行定时任务；这些由具备相应权限的宿主实现。时分级提醒不能塞进日期级字段。文件扫描用法见模块文档。
+
+> 用 $work-growth 参考我的任务台账和昨晚反馈，执行早报检查，只突出今天需要推进或确认的事。
+
+> 用 $work-growth 做收工检查，核实最后一步，收到我的反馈后更新状态和下一次检查日期。
+
 ## 安装
 
-本仓库的 [SKILL.md](SKILL.md) 是完整、自包含的 Skill，包含规则、模板和 12 个虚构行为验收场景。下载后放入宿主支持的 Skill 目录，文件夹命名为 `work-growth`。
+[SKILL.md](SKILL.md) 是入口，包含成长规则与模板；[calendar-monitoring.md](calendar-monitoring.md) 提供日历跟进、早报与收工流程。请下载完整仓库并保留目录结构，放入宿主支持的 Skill 目录，文件夹命名为 `work-growth`。
 
 例如，支持用户级 `~/.codex/skills` 的 Codex 环境：
 
