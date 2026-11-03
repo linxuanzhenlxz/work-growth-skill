@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "timezone": "Europe/Berlin",
+  "sourceAsOf": "2026-11-03T08:30:00+01:00",
+  "tasks": [
+    {
+      "id": "T-001-send/2026-11",
+      "title": "发送本轮资料请求",
+      "status": "closed",
+      "nextAction": "",
+      "owner": "我",
+      "due": "2026-11-02",
+      "completionEvidence": "用户明确确认已发送",
+      "updatedAt": "2026-11-02T16:40:00+01:00"
+    },
+    {
+      "id": "T-001-collect/2026-11",
+      "title": "收齐本轮部门资料",
+      "status": "waiting",
+      "nextAction": "向甲组确认缺失资料和承诺时间",
+      "owner": "我",
+      "waitingFor": "甲组",
+      "promisedBy": "2026-11-03",
+      "due": "2026-11-05",
+      "forecast": "2026-11-04",
+      "nextCheck": "2026-11-03",
+      "dependencies": [],
+      "syncPending": true
+    },
+    {
+      "id": "T-002-review/2026-11",
+      "title": "复核本轮报告",
+      "status": "planned",
+      "nextAction": "先核对已收到的乙组资料",
+      "owner": "我",
+      "due": "2026-11-06",
+      "forecast": "2026-11-05",
+      "executeOn": "2026-11-03",
+      "dependencies": [
+        "T-001-collect/2026-11"
+      ]
+    },
+    {
+      "id": "T-003-archive/2026-11",
+      "title": "归档最终交付",
+      "status": "active",
+      "nextAction": "确认最终版本位置",
+      "owner": "我",
+      "due": "2026-11-02",
+      "forecast": "2026-11-03",
+      "nextCheck": "2026-11-03"
+    },
+    {
+      "id": "T-004",
+      "title": "流程优化试点",
+      "status": "paused",
+      "resumeCondition": "本轮交付完成后评估"
+    }
+  ]
+}
