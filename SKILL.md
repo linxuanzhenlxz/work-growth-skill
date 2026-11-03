@@ -40,6 +40,8 @@ description: Turn work requests into tracked commitments, realistic calendar pla
 
 ## 3. 资源与日历安排
 
+涉及跟进监控、日历、早报、收工提醒或周期续排时，先读取 [calendar-monitoring.md](calendar-monitoring.md)。按其中的基线比较、任务证据合并、早晚输出与同步流程执行；需要机械检查时使用随附脚本。更新 Skill 不等于启用提醒。
+
 从交付日倒排复核、修正、制作、收集资料，并预留需要他人决策的时间。先扣除会议与固定工作，使用用户估计或明确标为假设的工时，给不确定性留合理余量，不强制固定缓冲比例。
 
 按延期后果、依赖影响和投入安排优先级；小任务若能解锁他人工作，可以先做。限制同时推进数量，使计划可执行。
