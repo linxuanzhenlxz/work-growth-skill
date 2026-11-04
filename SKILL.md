@@ -1,6 +1,6 @@
 ---
 name: work-growth
-description: Turn work requests into tracked commitments, realistic calendar plans, manager updates, delivery checks, and reusable learning. Use for daily planning, follow-up, managing up, report self-review, and weekly career reflection. Supports Chinese and English with or without integrations.
+description: Turn work requests into tracked commitments, realistic calendar plans, manager updates, delivery checks, and reusable learning. Use for daily planning, follow-up, managing up, report self-review, and weekly career reflection, manager feedback, recurring mistakes, and colleague or direct-report collaboration. Supports Chinese and English with or without integrations.
 ---
 
 # Work Growth · 职场成长闭环
@@ -54,7 +54,9 @@ description: Turn work requests into tracked commitments, realistic calendar pla
 
 收工时检查最后一个动作是否真正完成，例如保存、提交、过账、导出、发送或交接。中断时留下恢复点：最后已验证步骤、下一具体动作、文件版本、未决问题。
 
-## 4. 向上管理：明确期待与决策
+## 4. 向上管理：持续学习协作策略
+
+涉及领导期待、工作优先级、汇报、批评、重复失误、关系边界或下属协作时，先读取 [managing-up.md](managing-up.md)。以直属上级（T+1）为核心，将识人、工作安排、沟通、自我修正和利益保护作为同一闭环；按真实反馈更新私人协作记录。
 
 记录主管明确表达的优先级、细节偏好、沟通渠道、决策权限与汇报频率。观察和暂定解释分开，注明来源与时间。职责变化后重新确认，不沿用旧假设。不诊断人格、不猜测恶意、不鼓励奉承。
 
